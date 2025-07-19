@@ -1,4 +1,3 @@
-
 import os
 from fpdf import FPDF
 from datetime import datetime
@@ -7,7 +6,7 @@ from datetime import datetime
 FINAL_BOOK_DIR = "../assets/final_book"
 TXT_PATH = os.path.join(FINAL_BOOK_DIR, "final_book_latest.txt")
 
-#text exists
+
 if not os.path.exists(TXT_PATH):
     raise FileNotFoundError("-- 'final_book_latest.txt' not found. Run merging step first!")
 

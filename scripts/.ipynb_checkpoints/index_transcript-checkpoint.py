@@ -1,5 +1,3 @@
-# 📁 File: scripts/index_transcript.py
-
 import os
 import sys
 import uuid
@@ -31,7 +29,7 @@ def load_transcript(transcript_path):
 
 
 def main():
-    print("🔍 Indexing latest transcript into ChromaDB...")
+    print("-- Indexing latest transcript into ChromaDB...")
     transcript_path = os.path.join("assets", "voice_transcripts", "transcript_latest.txt")
 
     try:

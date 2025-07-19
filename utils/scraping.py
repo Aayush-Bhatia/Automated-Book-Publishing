@@ -1,10 +1,8 @@
-
-
 import os
 import asyncio
 from playwright.async_api import async_playwright
 
-#folders exist
+
 os.makedirs("assets/screenshots", exist_ok=True)
 os.makedirs("assets/raw_text", exist_ok=True)
 

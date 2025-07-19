@@ -12,7 +12,7 @@ client = Groq(api_key=api_key)
 
 
 def calculate_reward(original_text, new_text):
-    # Length score
+    
     orig_len = len(original_text)
     new_len = len(new_text)
     length_score = 1 - abs(orig_len - new_len) / max(orig_len, new_len)
@@ -55,7 +55,7 @@ Only reply with the number:"""
         "final_reward": round(final, 3)
     }
 
-# ✅ CLI usage
+
 def run_reward_comparison(original_path, edited_path):
     if not (os.path.exists(original_path) and os.path.exists(edited_path)):
         print("-- One or both files not found.")

@@ -1,4 +1,4 @@
-# 📁 scripts/merge_edits.py
+
 
 import os
 from datetime import datetime
@@ -15,7 +15,7 @@ def merge_all_edits():
     ])
 
     if not all_files:
-        print("⚠️ No human edits found. Please run the editing step first.")
+        print("-- No human edits found. Please run the editing step first.")
         return
 
     #Output paths
@@ -40,6 +40,6 @@ def merge_all_edits():
     print("-- Final merged file saved at:", final_txt_path)
     print("-- Also updated:", latest_path)
 
-# ✅ Allow CLI use
+
 if __name__ == "__main__":
     merge_all_edits()

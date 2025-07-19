@@ -1,5 +1,3 @@
-# 📁 File: scripts/voice_query.py
-
 import os
 import sys
 import time
@@ -20,7 +18,7 @@ def main():
         print("-- No recognizable speech detected.")
         return
 
-    print(f"\n🧠 You asked: {query}")
+    print(f"\n-- You asked: {query}")
 
     embedder = load_embedder()
     collection = get_chroma_collection()

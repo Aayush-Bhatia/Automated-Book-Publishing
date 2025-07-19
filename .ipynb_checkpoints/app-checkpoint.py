@@ -1,4 +1,3 @@
-# 📁 File: app.py
 
 import os
 import asyncio
@@ -17,12 +16,12 @@ async def run_scraping():
 
 asyncio.run(run_scraping())
 
-# Step 2: Generate improved versions using Writer Agent
-print("\n✍️ Generating Multiple Versions...")
+#Generate improved versions
+print("\n-- Generating Multiple Versions...")
 with open(raw_text_path, "r", encoding="utf-8") as f:
     original_text = f.read()
 
-# Reduce token load: use first few paragraphs
+
 chunks = original_text.split("\n\n")
 chunks = [c for c in chunks if c.strip() != ""]
 limited_text = "\n\n".join(chunks[:10])
@@ -34,19 +33,19 @@ for i, text in enumerate(versions):
     with open(f"assets/spun_text/version_{i+1}.txt", "w", encoding="utf-8") as f:
         f.write(text)
 
-# Step 3: Reviewer Agent (AI Review)
-print("\n🧬 Running Reviewer Agent...")
-# ✅ PATCHED: Replacing model in reviewer_agent.py to avoid GPT-4 access error
+#Reviewer Agent
+print("\n-- Running Reviewer Agent...")
+
 reviewed = reviewer_agent.reviewer_agent(limited_text)
 os.makedirs("assets/reviewed_text", exist_ok=True)
 with open("assets/reviewed_text/reviewed_chapter1.txt", "w", encoding="utf-8") as f:
     f.write(reviewed)
 
-# Step 4: Human Edit
+#Human Edit
 print("\n-- Human Editing...")
 human_edit.launch_edit_interface()
 
-# Step 5: Reward Evaluation (Basic RL Score)
+# Reward Evaluation (Basic RL Score)
 print("\n-- Scoring Human Edit...")
 raw = "assets/raw_text/chapter1.txt"
 edited = "assets/human_edits/human_edit_latest.txt"
@@ -60,8 +59,8 @@ with open(result_path, "w") as f:
 
 print(f"-- Reward saved at: {result_path}")
 
-# Step 6: Merge All Edits into Final Book
-print("\n📚 Merging All Human Edits...")
+# Merge All Edits into Final Book
+print("\n-- Merging All Human Edits...")
 merge_edits.merge_all_edits()
 
 print("\n-- All essential steps completed successfully!")

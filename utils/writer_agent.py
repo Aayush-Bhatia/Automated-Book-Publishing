@@ -1,4 +1,3 @@
-
 from groq import Groq
 import os
 from dotenv import load_dotenv
@@ -28,7 +27,7 @@ Respond with only the improved version. Do not explain anything."""
             versions.append(improved)
 
         except Exception as e:
-            print(f"❌ Error in version {i+1}: {e}")
+            print(f"--- Error in version {i+1}: {e}")
             versions.append(input_text)  # fallback
 
     return versions

@@ -1,5 +1,3 @@
-# 📁 File: scripts/text_query.py
-
 import os
 import sys
 sys.path.append(os.path.abspath(".."))

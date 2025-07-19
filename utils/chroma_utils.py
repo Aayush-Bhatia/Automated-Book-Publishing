@@ -1,10 +1,5 @@
 import chromadb
 
-<<<<<<< HEAD
-
-=======
-# ✅ Use new PersistentClient without Settings
->>>>>>> 6f0beb6 (initial workflow done)
 def get_chroma_collection(collection_name="transcript_store"):
     client = chromadb.PersistentClient(path=".chromadb")
     return client.get_or_create_collection(name=collection_name)
