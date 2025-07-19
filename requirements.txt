@@ -1,5 +1,4 @@
-openai
-<<<<<<< HEAD
+
 groq
 playwright
 streamlit
