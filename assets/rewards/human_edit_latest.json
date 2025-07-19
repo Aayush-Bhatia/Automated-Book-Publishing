@@ -1,0 +1,13 @@
+{
+<<<<<<< HEAD
+  "length_score": 0.0,
+  "readability_score": 0.0,
+  "human_like_score": 0.5,
+  "final_reward": 0.15
+=======
+  "length_score": 0.403,
+  "readability_score": 0.766,
+  "human_like_score": 0.8,
+  "final_reward": 0.631
+>>>>>>> 6f0beb6 (initial workflow done)
+}

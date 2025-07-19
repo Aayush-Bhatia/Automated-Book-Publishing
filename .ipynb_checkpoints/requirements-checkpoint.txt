@@ -1,0 +1,21 @@
+openai
+<<<<<<< HEAD
+groq
+playwright
+streamlit
+chromadb
+sentence-transformers
+speechrecognition
+pyaudio
+sounddevice
+scipy
+ipywidgets
+python-dotenv
+rouge-score
+numpy
+
+textstat	
+fpdf	
+dotenv	
+aiofiles	
+
